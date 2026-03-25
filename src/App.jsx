@@ -115,6 +115,7 @@ export default function App() {
   const [exp1Ref, exp1Visible] = useInView()
   const [exp2Ref, exp2Visible] = useInView()
   const [exp3Ref, exp3Visible] = useInView()
+  const [exp4Ref, exp4Visible] = useInView()
   const [edu1Ref, edu1Visible] = useInView()
   const [navVisible, setNavVisible] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -310,6 +311,16 @@ export default function App() {
           <p className="section-title">Experience</p>
           <h2>Experience</h2>
           <ul className="experience-list">
+            <li
+              ref={exp4Ref}
+              className={`experience-item reveal ${exp4Visible ? 'reveal-visible' : ''}`}
+            >
+              <h3>Incoming Summer SWE Intern, Splunk</h3>
+              <div className="experience-meta">March 2026 – Present · Boulder, CO</div>
+              <p>
+                FinOPs team
+              </p>
+            </li>
             <li
               ref={exp3Ref}
               className={`experience-item reveal ${exp3Visible ? 'reveal-visible' : ''}`}
