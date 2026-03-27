@@ -332,18 +332,6 @@ export default function App() {
               </p>
             </li>
             <li
-              ref={exp1Ref}
-              className={`experience-item reveal ${exp1Visible ? 'reveal-visible' : ''}`}
-            >
-              <h3>Software Engineering Intern, American Red Cross</h3>
-              <div className="experience-meta">June 2025 – August 2025 · Remote</div>
-              <p>
-                Developed a utility script and REST API to archive 25,000+ Jira issues, saving over
-                200 engineering hours, and built a Flask-based web app to trigger and monitor archival jobs
-                while collaborating with engineers on internal tooling for an AWS Kubernetes migration.
-              </p>
-            </li>
-            <li
               ref={exp2Ref}
               className={`experience-item reveal ${exp2Visible ? 'reveal-visible' : ''}`}
             >
@@ -352,6 +340,18 @@ export default function App() {
               <p>
                 Guided K–12 students through math and English problem sets, tracked progress, and shared
                 targeted feedback with parents to support long-term skill development.
+              </p>
+            </li>
+            <li
+              ref={exp1Ref}
+              className={`experience-item reveal ${exp1Visible ? 'reveal-visible' : ''}`}
+            >
+              <h3>Software Engineering Intern, American Red Cross</h3>
+              <div className="experience-meta">June 2024 – August 2024 · Remote</div>
+              <p>
+                Developed a utility script and REST API to archive 25,000+ Jira issues, saving over
+                200 engineering hours, and built a Flask-based web app to trigger and monitor archival jobs
+                while collaborating with engineers on internal tooling for an AWS Kubernetes migration.
               </p>
             </li>
           </ul>
