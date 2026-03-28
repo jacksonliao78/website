@@ -1,3 +1,31 @@
+/* Page shell: potatoes scroll with the document (not fixed to the viewport) */
+.app-shell {
+  position: relative;
+}
+
+/* Decorative potato background — absolute layer matching full page height (content column) */
+.potato-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.potato-bg-img {
+  position: absolute;
+  height: auto;
+  max-width: none;
+  user-select: none;
+  filter: grayscale(0.08);
+}
+
+.page-main {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
 /* Nav */
 .nav {
   position: fixed;

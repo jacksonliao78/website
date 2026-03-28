@@ -62,6 +62,39 @@ const PROJECTS = [
   },
 ]
 
+const POTATO_BG_PLACEMENTS = [
+  { top: '1%', left: '68%', width: '34px', rotate: -13, opacity: 0.17 },
+  { top: '3%', left: '28%', width: '32px', rotate: 21, opacity: 0.16 },
+  { top: '5%', left: '92%', width: '36px', rotate: -19, opacity: 0.18 },
+  { top: '9%', left: '15%', width: '30px', rotate: 14, opacity: 0.15 },
+  { top: '11%', left: '48%', width: '34px', rotate: -25, opacity: 0.17 },
+  { top: '15%', left: '62%', width: '36px', rotate: 17, opacity: 0.18 },
+  { top: '19%', left: '35%', width: '32px', rotate: -10, opacity: 0.16 },
+  { top: '21%', left: '78%', width: '38px', rotate: 23, opacity: 0.19 },
+  { top: '6%', left: '4%', width: '46px', rotate: -16, opacity: 0.22 },
+  { top: '14%', left: '88%', width: '40px', rotate: 22, opacity: 0.18 },
+  { top: '28%', left: '12%', width: '52px', rotate: 8, opacity: 0.24 },
+  { top: '35%', left: '72%', width: '38px', rotate: -24, opacity: 0.17 },
+  { top: '48%', left: '6%', width: '44px', rotate: 19, opacity: 0.2 },
+  { top: '52%', left: '91%', width: '48px', rotate: -11, opacity: 0.18 },
+  { top: '62%', left: '18%', width: '36px', rotate: -28, opacity: 0.15 },
+  { top: '68%', left: '58%', width: '54px', rotate: 14, opacity: 0.22 },
+  { top: '78%', left: '82%', width: '42px', rotate: -7, opacity: 0.2 },
+  { top: '85%', left: '25%', width: '40px', rotate: 26, opacity: 0.17 },
+  { top: '18%', left: '42%', width: '34px', rotate: -19, opacity: 0.14 },
+  { top: '8%', left: '58%', width: '48px', rotate: 11, opacity: 0.2 },
+  { top: '42%', left: '48%', width: '32px', rotate: -33, opacity: 0.15 },
+  { top: '58%', left: '38%', width: '46px', rotate: 17, opacity: 0.18 },
+  { top: '72%', left: '8%', width: '38px', rotate: -14, opacity: 0.17 },
+  { top: '92%', left: '68%', width: '44px', rotate: 21, opacity: 0.2 },
+  { top: '24%', left: '94%', width: '36px', rotate: -9, opacity: 0.15 },
+  { top: '38%', left: '26%', width: '42px', rotate: 29, opacity: 0.18 },
+  { top: '88%', left: '12%', width: '40px', rotate: -21, opacity: 0.17 },
+  { top: '12%', left: '22%', width: '30px', rotate: 6, opacity: 0.14 },
+  { top: '64%', left: '94%', width: '34px', rotate: -26, opacity: 0.15 },
+  { top: '76%', left: '44%', width: '36px', rotate: 13, opacity: 0.17 },
+]
+
 function techSlug(name) {
   const lower = name.toLowerCase()
   if (name === 'C++') return 'cpp'
@@ -148,7 +181,24 @@ export default function App() {
   ]
 
   return (
-    <>
+    <div className="app-shell">
+      <div className="potato-bg" aria-hidden="true">
+        {POTATO_BG_PLACEMENTS.map((p, i) => (
+          <img
+            key={i}
+            className="potato-bg-img"
+            src="/potato-walk.png"
+            alt=""
+            style={{
+              top: p.top,
+              left: p.left,
+              width: p.width,
+              opacity: p.opacity,
+              transform: `rotate(${p.rotate}deg)`,
+            }}
+          />
+        ))}
+      </div>
       <nav className={`nav ${navVisible ? 'nav-visible' : 'nav-hidden'} ${isScrolled ? 'nav-scrolled' : ''}`}>
         <div className="nav-container">
           <a href="#" className="nav-name">Jackson Liao-Cheng</a>
@@ -162,7 +212,7 @@ export default function App() {
         </div>
       </nav>
 
-      <main>
+      <main className="page-main">
         <header className="hero">
           <div className="hero-photo">
             <img src="/portfolio.jpg" alt="Your Name" />
@@ -473,6 +523,6 @@ export default function App() {
           </a>
         </section>
       </main>
-    </>
+    </div>
   )
 }
