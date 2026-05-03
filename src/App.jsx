@@ -54,6 +54,13 @@ const PROJECTS = [
     href: null,
   },
   {
+    title: 'Spinny',
+    description:
+      'Yeah I play tetris too much.... This is a much more polished Tetris app, with more features and gamemodes. No bot yet (maybe soon).',
+    stack: ['TypeScript', 'PostgreSQL', 'Supabase', 'Vercel'],
+    href: 'https://github.com/jacksonliao78/spinny',
+  },
+  {
     title: 'Others...',
     description:
       'Solutions and practice mainly for USACO and the Advent of Code. Yay algorithms.',
@@ -126,6 +133,7 @@ function TechIcon({ name }) {
     postgresql: '/postgresql.svg',
     sqlite: '/sqlite3.svg',
     sqlite3: '/sqlite3.svg',
+    supabase: '/supabase.svg',
 
     git: '/git.svg',
     docker: '/docker.svg',
@@ -440,7 +448,7 @@ export default function App() {
             <div className="skill-category">
               <h3 className="skill-category-title">Backend</h3>
               <div className="skills-grid">
-                {['Flask', 'FastAPI', 'Spark', 'PostgreSQL', 'SQLite3'].map((name) => (
+                {['Flask', 'FastAPI', 'Spark', 'PostgreSQL', 'SQLite3', 'Supabase'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
