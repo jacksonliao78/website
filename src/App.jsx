@@ -373,10 +373,16 @@ export default function App() {
               ref={exp4Ref}
               className={`experience-item reveal ${exp4Visible ? 'reveal-visible' : ''}`}
             >
-              <h3>Incoming Summer SWE Intern, Splunk</h3>
+              <h3>Software Engineering Intern, Splunk</h3>
               <div className="experience-meta">March 2026 – Present · Boulder, CO</div>
               <p>
-                FinOPs team
+                Automated new-feature cloud spend monitoring with LangGraph workflows and MCP servers,
+                eliminating multi-day manual review, saving ~100 hours monthly, and doubling coverage.
+                Mitigated model hallucinations with RAG chains and human-in-the-loop review to block
+                invalid outputs, backed by unit, end-to-end, and user acceptance testing. Built and
+                evaluated an ML model to group EC2 spend by risk (80% accuracy), then used those groups
+                to size savings plans (~$33,000 monthly savings at 93% commitment utilization), and
+                shipped an AWS discount calculator to compare per-stack costs across plans.
               </p>
             </li>
             <li
