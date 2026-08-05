@@ -374,7 +374,7 @@ export default function App() {
               className={`experience-item reveal ${exp4Visible ? 'reveal-visible' : ''}`}
             >
               <h3>Software Engineering Intern, Splunk</h3>
-              <div className="experience-meta">March 2026 – Present · Boulder, CO</div>
+              <div className="experience-meta">May 2026 – August 2026 · Boulder, CO</div>
               <p>
                 Automated new-feature cloud spend monitoring with LangGraph workflows and MCP servers,
                 eliminating multi-day manual review, saving ~100 hours monthly, and doubling coverage.
