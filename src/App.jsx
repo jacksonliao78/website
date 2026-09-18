@@ -118,16 +118,20 @@ function TechIcon({ name }) {
     python: '/python.svg',
     javascript: '/javascript.svg',
     typescript: '/typescript.svg',
+    'javascript-typescript': '/typescript.svg',
     java: '/java.svg',
     ocaml: '/ocaml.svg',
     sql: '/sql.svg',
     cpp: '/cpp.svg',
     go: '/go.svg',
+    r: '/r.svg',
+    'html-css': '/html-css.svg',
 
     react: '/react.svg',
     vite: '/vite.svg',
     tailwind: '/tailwind.svg',
 
+    rest: '/rest.svg',
     flask: '/flask.svg',
     fastapi: '/fastapi.svg',
     spark: '/spark.svg',
@@ -136,16 +140,27 @@ function TechIcon({ name }) {
     sqlite3: '/sqlite3.svg',
     supabase: '/supabase.svg',
     alloydb: '/alloydb.svg',
-    langgraph: '/langgraph.svg',
-    langchain: '/langchain.svg',
 
-    git: '/git.svg',
+    aws: '/aws.svg',
+    gcp: '/gcp.svg',
+    kubernetes: '/kubernetes.svg',
     docker: '/docker.svg',
+    linux: '/linux.svg',
+    git: '/git.svg',
     vercel: '/vercel.svg',
+    grafana: '/grafana.svg',
+
+    pytorch: '/pytorch.svg',
+    rag: '/rag.svg',
+    langchain: '/langchain.svg',
+    langgraph: '/langgraph.svg',
+    'langchain-langgraph': '/langgraph.svg',
+    mcp: '/mcp.svg',
+    'vector-databases': '/vector-databases.svg',
+    'model-evaluation': '/model-evaluation.svg',
+
     junit: '/junit.svg',
     pygame: '/pygame.svg',
-    grafana: '/grafana.svg',
-    aws: '/aws.svg',
   }
 
   const src = imageIcons[slug]
@@ -234,8 +249,8 @@ export default function App() {
           </div>
           <div className="hero-content">
             <p className="hero-blurb">
-              Hi! I'm Jackson, a fullstack software engineer that enjoys learning about algorithms. I also 
-              dabble in ML/AI, and am continuously looking to expand upon and improve my skillset. 
+              Hi! I'm Jackson, a software engineer interested in backend, ML, and AI. I enjoy learning
+              about algorithms, and am continuously looking to expand upon and improve my skillset.
             </p>
             <a href={RESUME_URL} className="hero-resume-button" target="_blank" rel="noopener noreferrer">
               Resume
@@ -257,7 +272,7 @@ export default function App() {
             <div className="about-grid-cell">
               <h3 className="about-cell-title">Focus</h3>
               <p>
-                Mostly full-stack development, but I'm also interested in creating algorithms.
+                Mostly interested in backend, ML, and AI, and also enjoy creating algorithms.
               </p>
             </div>
             <div className="about-grid-cell">
@@ -448,7 +463,7 @@ export default function App() {
             <div className="skill-category">
               <h3 className="skill-category-title">Languages</h3>
               <div className="skills-grid">
-                {['Python', 'JavaScript', 'TypeScript', 'Java', 'Go', 'OCaml', 'SQL'].map((name) => (
+                {['Python', 'Java', 'Go', 'JavaScript/TypeScript', 'OCaml', 'SQL', 'R', 'HTML/CSS'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
@@ -459,9 +474,9 @@ export default function App() {
               </div>
             </div>
             <div className="skill-category">
-              <h3 className="skill-category-title">Frontend</h3>
+              <h3 className="skill-category-title">Backend & Databases</h3>
               <div className="skills-grid">
-                {['React.js', 'Vite', 'Tailwind CSS'].map((name) => (
+                {['REST', 'Flask', 'FastAPI', 'PostgreSQL', 'AlloyDB'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
@@ -472,9 +487,9 @@ export default function App() {
               </div>
             </div>
             <div className="skill-category">
-              <h3 className="skill-category-title">Backend</h3>
+              <h3 className="skill-category-title">Cloud & Infrastructure</h3>
               <div className="skills-grid">
-                {['Flask', 'FastAPI', 'Spark', 'PostgreSQL', 'AlloyDB', 'SQLite3', 'Supabase', 'LangGraph'].map((name) => (
+                {['AWS', 'GCP', 'Kubernetes', 'Docker', 'Linux', 'Git'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
@@ -485,13 +500,10 @@ export default function App() {
               </div>
             </div>
             <div className="skill-category">
-              <h3 className="skill-category-title">Other</h3>
+              <h3 className="skill-category-title">AI/ML</h3>
               <div className="skills-grid">
-                {['Git', 'Docker', 'Vercel', 'Grafana', 'AWS'].map((name) => (
+                {['PyTorch', 'RAG', 'LangChain/LangGraph', 'MCP', 'Vector Databases', 'Model Evaluation'].map((name) => (
                   <span key={name} className="skill-tag">
-                    <span className="skill-tag-icon" aria-hidden="true">
-                      <TechIcon name={name} />
-                    </span>
                     <span className="skill-tag-label">{name}</span>
                   </span>
                 ))}
