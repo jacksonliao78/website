@@ -122,6 +122,7 @@ function TechIcon({ name }) {
     ocaml: '/ocaml.svg',
     sql: '/sql.svg',
     cpp: '/cpp.svg',
+    go: '/go.svg',
 
     react: '/react.svg',
     vite: '/vite.svg',
@@ -134,12 +135,17 @@ function TechIcon({ name }) {
     sqlite: '/sqlite3.svg',
     sqlite3: '/sqlite3.svg',
     supabase: '/supabase.svg',
+    alloydb: '/alloydb.svg',
+    langgraph: '/langgraph.svg',
+    langchain: '/langchain.svg',
 
     git: '/git.svg',
     docker: '/docker.svg',
     vercel: '/vercel.svg',
     junit: '/junit.svg',
     pygame: '/pygame.svg',
+    grafana: '/grafana.svg',
+    aws: '/aws.svg',
   }
 
   const src = imageIcons[slug]
@@ -157,6 +163,7 @@ export default function App() {
   const [exp2Ref, exp2Visible] = useInView()
   const [exp3Ref, exp3Visible] = useInView()
   const [exp4Ref, exp4Visible] = useInView()
+  const [exp5Ref, exp5Visible] = useInView()
   const [edu1Ref, edu1Visible] = useInView()
   const [navVisible, setNavVisible] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -370,6 +377,19 @@ export default function App() {
           <h2>Experience</h2>
           <ul className="experience-list">
             <li
+              ref={exp5Ref}
+              className={`experience-item reveal ${exp5Visible ? 'reveal-visible' : ''}`}
+            >
+              <h3>Student Software Developer, Google</h3>
+              <div className="experience-meta">July 2026 – Present · Ithaca, NY</div>
+              <p>
+                Built a Go service that correlates GPU, CPU, and database telemetry to cut ML failure
+                diagnosis time by 50%, and improved root-cause identification accuracy by 30% with
+                semantic retrieval of past incidents via AlloyDB. Unified 15+ observability metrics
+                linking ML performance to infra and database health in Grafana dashboards.
+              </p>
+            </li>
+            <li
               ref={exp4Ref}
               className={`experience-item reveal ${exp4Visible ? 'reveal-visible' : ''}`}
             >
@@ -428,7 +448,7 @@ export default function App() {
             <div className="skill-category">
               <h3 className="skill-category-title">Languages</h3>
               <div className="skills-grid">
-                {['Python', 'JavaScript', 'TypeScript', 'Java', 'OCaml', 'SQL'].map((name) => (
+                {['Python', 'JavaScript', 'TypeScript', 'Java', 'Go', 'OCaml', 'SQL'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
@@ -454,7 +474,7 @@ export default function App() {
             <div className="skill-category">
               <h3 className="skill-category-title">Backend</h3>
               <div className="skills-grid">
-                {['Flask', 'FastAPI', 'Spark', 'PostgreSQL', 'SQLite3', 'Supabase'].map((name) => (
+                {['Flask', 'FastAPI', 'Spark', 'PostgreSQL', 'AlloyDB', 'SQLite3', 'Supabase', 'LangGraph'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
@@ -467,7 +487,7 @@ export default function App() {
             <div className="skill-category">
               <h3 className="skill-category-title">Other</h3>
               <div className="skills-grid">
-                {['Git', 'Docker', 'Vercel'].map((name) => (
+                {['Git', 'Docker', 'Vercel', 'Grafana', 'AWS'].map((name) => (
                   <span key={name} className="skill-tag">
                     <span className="skill-tag-icon" aria-hidden="true">
                       <TechIcon name={name} />
